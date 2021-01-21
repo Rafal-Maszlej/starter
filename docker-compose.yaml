@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  backend:
+    build: ./backend
+    image: starter_backend
+    container_name: starter-backend
+    restart: always
+    stdin_open: true
+    tty: true
+    ports:
+      - 8000:8000
