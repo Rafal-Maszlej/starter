@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+  nginx:
+    build: ./nginx
+    image: starter_nginx
+    container_name: starter-nginx
+    restart: always
+    ports:
+      - 8080:80
+    depends_on:
+      - backend
+    networks:
+      - backend
+
   backend:
     build: ./backend
     image: starter_backend
@@ -10,8 +22,6 @@ services:
     tty: true
     env_file:
       - .env
-    ports:
-      - 8000:8000
     depends_on:
       - db
     networks:
