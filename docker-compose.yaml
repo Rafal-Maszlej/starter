@@ -10,8 +10,10 @@ services:
       - 8080:80
     depends_on:
       - backend
+      - frontend
     networks:
       - backend
+      - frontend
 
   backend:
     build: ./backend
@@ -31,6 +33,16 @@ services:
       - ./backend:/backend
       - static:/backend/static
 
+  frontend:
+    build: ./frontend
+    image: starter_frontend
+    container_name: starter-frontend
+    stdin_open: true
+    networks:
+      - frontend
+    volumes:
+      - ./frontend:/frontend
+
   db:
     build: ./db
     image: starter_db
@@ -44,6 +56,7 @@ services:
 
 networks:
   backend:
+  frontend:
   db:
 
 volumes:
