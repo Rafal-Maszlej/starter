@@ -15,10 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework_jwt.views import (
+    obtain_jwt_token,
+    refresh_jwt_token,
+    verify_jwt_token,
+)
+
+
+jwt_urls = [
+    path("obtain", obtain_jwt_token, name="jwt-obtain"),
+    path("refresh", refresh_jwt_token, name="jwt-refresh"),
+    path("verify", verify_jwt_token, name="jwt-verify"),
+]
 
 
 api_urlpatterns = [
-    path("", include("rest_framework.urls"))
+    path("", include("rest_framework.urls")),
+    path("jwt/", include(jwt_urls)),
 ]
 
 
