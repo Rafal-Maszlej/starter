@@ -12,14 +12,30 @@ services:
       - .env
     ports:
       - 8000:8000
+    depends_on:
+      - db
     networks:
       - backend
+      - db
     volumes:
       - ./backend:/backend
       - static:/backend/static
 
+  db:
+    build: ./db
+    image: starter_db
+    container_name: starter-db
+    env_file:
+      - .env
+    networks:
+      - db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
 networks:
   backend:
+  db:
 
 volumes:
   static:
+  db-data:
