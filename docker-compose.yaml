@@ -8,5 +8,18 @@ services:
     restart: always
     stdin_open: true
     tty: true
+    env_file:
+      - .env
     ports:
       - 8000:8000
+    networks:
+      - backend
+    volumes:
+      - ./backend:/backend
+      - static:/backend/static
+
+networks:
+  backend:
+
+volumes:
+  static:
