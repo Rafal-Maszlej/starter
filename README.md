@@ -8,6 +8,7 @@
   * [localhost:8080/api/jwt/](http://localhost:8080/api/jwt/) - JWT endpoints
 * Automatic converting `CamelCase` <-> `snake_case` in requests between frontend and backend  
 * Custom `User` model
+* Django Debug Toolbar
 
 ### How to
 #### Create `.env` file  
