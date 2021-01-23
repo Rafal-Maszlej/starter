@@ -10,6 +10,11 @@
 * Custom `User` model
 * Django Debug Toolbar
 
+### System requirements  
+* make
+* docker
+* docker-compose
+
 ### How to
 #### Create `.env` file  
 ```.env
