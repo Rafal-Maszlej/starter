@@ -1,6 +1,6 @@
 # Project starter
 
-### Servises
+### Services
 * Django
 * React
 * Postgres
