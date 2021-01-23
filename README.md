@@ -7,6 +7,7 @@
   * [localhost:8080/api/](http://localhost:8080/api/) - API root
   * [localhost:8080/api/jwt/](http://localhost:8080/api/jwt/) - JWT endpoints
 * Automatic converting `CamelCase` <-> `snake_case` in requests between frontend and backend  
+* Custom `User` model
 
 ### How to
 #### Create `.env` file  
