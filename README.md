@@ -1,4 +1,10 @@
-# starter
+# Project starter
+
+### Servises
+* Django
+* React
+* Postgres
+* Nginx
 
 ### Features
 * Endpoints
@@ -6,7 +12,7 @@
   * [localhost:8080/admin](http://localhost:8080/admin) - Admin panel
   * [localhost:8080/api/](http://localhost:8080/api/) - API root
   * [localhost:8080/api/jwt/](http://localhost:8080/api/jwt/) - JWT endpoints
-* Automatic converting `CamelCase` <-> `snake_case` in requests between frontend and backend  
+* Automatic conversion `CamelCase` <-> `snake_case` in requests between frontend and backend  
 * Custom `User` model
 * Django Debug Toolbar
 
